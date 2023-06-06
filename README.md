@@ -1,7 +1,14 @@
 ## Для установки или переустановки программного обеспечения GPU GOD выполните следующие действия:
 
-1.
+1. Для проведения теста потребуются некоторые модули linux и их настройка, для автоматической установки и настройки используйте команду ниже
 
 ```bash
-cd /home/ && git clone https://github.com/skret002/hive-install-gpugod.git && cd hive-install-gpugod && sudo chmod ugo+x install.bin && ./install.bin && systemctl status fan && rm -r /home/hive-install-gpugod && sudo reboot
+cd home/ && git clone https://github.com/skret002/testNCT && cd testNCT && python3 install.py && reboot
 ```
+2. Полсле первой команды, риг перезагрузится. Теперь давайте выясним, есть ли на вашем риге возможность управлять кулерами, для этого запускаем следующию команду
+```bash
+sensors | grep 'fan2:'
+```
+3. Для того что бы увидеть результат, тапните по выполеной команде ![Screenshot_20230606_115755](https://github.com/skret002/testNCT/assets/25187010/e9c49b1d-9b6f-41e2-a34c-f152b4902736)
+4. Если вы видете ![Screenshot_20230606_115955](https://github.com/skret002/testNCT/assets/25187010/1537c5d1-16d5-441d-bec0-cebe084d9432)
+похожий результат, т.е скорость кулеров определилась и отлична от 0, значит на вашем риге есть необходимая микросхема для работы нашего ПО. Можно приступать к инсталяции!
